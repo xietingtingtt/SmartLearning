@@ -30,43 +30,58 @@
 ①デザイン
 図書管理システムのはメイン画面、検索画面、本棚画面で構成され、図１は図書管理システムの構成図である。
 
-![](./imaige1.png)
+![](./image1.png)
 
-実空間と仮想空間と融合、さりげなく利用者を支え
+図１
 
-# Projects
+## ②プログラミング
 
-## App and Cloud
-1. [Classroom attendance App and Cloud](./SmartClassroom)
-1. [Bookshelf App and Cloud](./SmartLibrary)
-1. [Traveler App and Cloud](./SmartTravel)
+App InventorはMITが提供していたAndroid対応アプリケーションを開発するソフトウェアである。難解な開発言語を覚える必要はない。パズルを作り上げていくようにアプリケーションを作成することができる。
+ウェブサーバーにデータを取得するために、APIを利用する。図２に示した通り、TinyWebDBという部品を使えば簡単にできる。TinyWebDBはタグをつけてメッセージをクラウドに保存したり、サーバーにタグ名を送信してその値を受け取ったりすることができる。
 
-## IoT and Cloud
-1. [Ubiquitous Home](./SmartHome)
-1. [EKG App and Cloud](./SmartHealth)
+本システムはApp Inventorを用いて図書管理システムを開発する。TinyWebDBのServiceURLを（http://tinydb.host/xulei/api）に設定する。本のISBNをタグとしてクラウドに送り、クラウドから本の詳細データが受けとれる。
 
-## Information System
-1. [Classroom account and file share](./SmartCloud)
-1. [Google Classroom API Application](./SmartLearning)
+![](./image2.png)
 
-# Supervisor
-* [Hong Chen](https://chen420.github.io/)
+図２
 
-# Members
-* [Members](./Members.md)
+実際のプログラムが図３の示した通り。
 
-# Knowledge base
-* [Lubuntu](./lubuntu.md)
-* [App inventor](./ai2.md)
-* [WordPress](./wp.md)
-* [Processing](./Processing.md)
+![](./image3.png)
 
-# Web sites
-* [http://chenlab.net](http://chenlab.net)
-* [http://daiichi-koudai.com](http://daiichi-koudai.com)
+図３
 
-# Related Pages
-* [https://uislab.github.io](https://uislab.github.io)
-* [https://ubiclub.github.io](https://ubiclub.github.io)
-* [https://edu2web.github.io](https://edu2web.github.io)
-* [https://gitbook.com](https://gitbook.com)
+## ③実演
+
+アプリを立ち上がると図４左はメイン画面で「検索」と「研究室一覧」ボタンがついている。
+　「検索」は検索画面を呼び出すボタンで、「研究室一覧」は研究室一覧リストへ遷移するボタンである。
+「研究室一覧」は本棚画面へ遷移するボタンである。
+図４右は本棚画面で、スマートフォンに作った本棚である。
+
+![](./image4.png)
+図４
+
+図５は検索結果が本棚に入れる。最初のQRアイコンを押して、スキャンモードに入り、本のバーコードを数字の形でTextBookに読み取れる。
+
+![](./image5.png)
+図５
+
+検索ボタンをクリックして、検索結果が出る。もし、この本が好きならば、本棚に入れるボタンをクリックすると、本棚に入れる。本棚で本を削除したいときに、本の表紙を長押しして、削除ができる。
+
+# 4.　結果・考察
+
+本研究は、クラウドとスマートフォンアプリを連携して、いつでも、どこでも、本研究室に本の情報を入手した。
+具体的な置く場所の情報を本棚コードとしてTextBoxに表示した。
+スマートフォンに保存された画像も一緒に表示し、図５のように検索した本が本棚リスト（スマートフォン用）に登録した。紙管理が一元化（デジタル化）になり、わかりやすく管理する。利用者に資料の有効活用ができる研究を行なっていた。
+但し、クラウドの本棚とアプリの本棚を同期できない、そしてクラウドから本の表紙を取り込みできない.
+
+# 5.　結論
+
+このアプリを使っていれば、効率が上がる。本もきれいな本棚に並べて、見やすく、便利になっている。
+今後の課題として、クラウドの本棚とアプリの本棚を同期する仕組み、そしてクラウドから本の表紙を取り込みする機能を実装する。
+
+
+
+
+
+
