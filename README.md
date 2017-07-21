@@ -1,6 +1,6 @@
 
 # Project Title
-# Google Formを利用した授業管理システム
+## Google Formを利用した授業管理システム
 
 # Elevator Pitch
 
